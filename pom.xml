@@ -187,5 +187,12 @@
         </dependency>
       </dependencies>
     </profile>
+    
+    <profile>
+   <id>sonar</id>
+   <activation>
+      <activeByDefault>true</activeByDefault>
+   </activation>
+</profile>
   </profiles>
 </project>
