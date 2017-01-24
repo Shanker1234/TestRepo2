@@ -12,7 +12,7 @@
 		<org.springframework-version>4.3.5.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
-		<sonar.jacoco.reportPaths>target/jacoco.exec</sonar.jacoco.reportPaths>
+		<jacoco.ut.execution.data.file>${project.build.directory}/coverage-reports/jacoco-ut.exec</jacoco.ut.execution.data.file>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -165,6 +165,13 @@
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
+						<configuration>
+							<!-- Sets the path to the file which contains the execution data. -->
+							<destFile>${jacoco.ut.execution.data.file}</destFile>
+							<!-- Sets the name of the property containing the settings for JaCoCo 
+								runtime agent. -->
+							<propertyName>surefireArgLine</propertyName>
+						</configuration>
 					</execution>
 					
 					<execution>
