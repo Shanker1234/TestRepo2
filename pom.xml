@@ -12,6 +12,7 @@
 		<org.springframework-version>4.3.5.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<sonar.jacoc.reportPaths>${project.build.directory}/coverage-reports/jacoco-ut.exec</sonar.jacoc.reportPaths>
 		<jacoco.ut.execution.data.file>${project.build.directory}/coverage-reports/jacoco-ut.exec</jacoco.ut.execution.data.file>
 	</properties>
 	<dependencies>
